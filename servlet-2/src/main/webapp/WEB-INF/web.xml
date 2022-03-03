@@ -5,11 +5,15 @@
                          http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0"
          metadata-complete="true">
+    <context-param>
+        <param-name>url</param-name>
+        <param-value>jdbc:mysql://localhost:3306/mybatis</param-value>
+    </context-param>
+
     <servlet>
         <servlet-name>hello</servlet-name>
         <servlet-class>com.robin.servlet.HelloServlet</servlet-class>
     </servlet>
-
     <servlet-mapping>
         <servlet-name>hello</servlet-name>
         <url-pattern>/hello</url-pattern>
@@ -20,10 +24,35 @@
         <servlet-name>getc</servlet-name>
         <servlet-class>com.robin.servlet.getServlet</servlet-class>
     </servlet>
-
     <servlet-mapping>
         <servlet-name>getc</servlet-name>
         <url-pattern>/getc</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>getInit</servlet-name>
+        <servlet-class>com.robin.servlet.getInitParameter</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getInit</servlet-name>
+        <url-pattern>/getInit</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>gp</servlet-name>
+        <servlet-class>com.robin.servlet.gp</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>gp</servlet-name>
+        <url-pattern>/gp</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>rf</servlet-name>
+        <servlet-class>com.robin.servlet.readFile</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>rf</servlet-name>
+        <url-pattern>/rf</url-pattern>
+    </servlet-mapping>
 </web-app>
